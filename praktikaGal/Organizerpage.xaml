@@ -1,0 +1,31 @@
+﻿<Page x:Class="praktikaGal.Organizerpage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:praktikaGal"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Background="White"
+      Title="Organizerpage">
+
+    <DockPanel>
+        <StackPanel DockPanel.Dock="Top" VerticalAlignment="Top" Height="50">
+            <Label Content="Окно организатора" Style="{StaticResource H1LabelStyle}" HorizontalAlignment="Center"/>
+        </StackPanel>
+        <ScrollViewer>
+            <DockPanel>
+                <StackPanel Orientation="Vertical" DockPanel.Dock="Left" MinWidth="200" VerticalAlignment="Bottom">
+                    <Image x:Name="profileImage" Height="200" Margin="0,70,0,40"/>
+                    <Button x:Name="profileButton" Content="Мой профиль" Click="profileButton_Click" Style="{StaticResource MainButtonStyle}" Margin="10"/>
+                </StackPanel>
+                <StackPanel Orientation="Vertical" VerticalAlignment="Bottom">
+                    <Label Name="helloLabel" Content="Доброе утро" Style="{StaticResource StandartLabelStyle}" Margin="10" HorizontalAlignment="Center"/>
+                    <Button x:Name="eventsButton" Content="Мероприятия" Click="eventsButton_Click" Style="{StaticResource HugeButtonStyle}" Margin="10"/>
+                    <Button x:Name="parcipantsButton" Content="Участники" Click="parcipantsButton_Click" Style="{StaticResource HugeButtonStyle}" Margin="10"/>
+                    <Button x:Name="judgesButton" Click="judgesButton_Click" Content="Жюри" Style="{StaticResource HugeButtonStyle}" Margin="10"/>
+                </StackPanel>
+            </DockPanel>
+        </ScrollViewer>
+    </DockPanel>
+</Page>
